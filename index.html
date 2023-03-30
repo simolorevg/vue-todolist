@@ -18,6 +18,10 @@
             <ul>
                 <li v-for='item in todo'>
                     <p>{{item.text}}</p>
+                    <div>
+                        <p v-if="!item.checked">&check;</p>
+                        <p v-else>&cross;</p>
+                    </div>
                 </li>
             </ul>
         </div>

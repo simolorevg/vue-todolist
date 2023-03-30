@@ -13,7 +13,11 @@ createApp({
     methods:{
         addTodo(){
             this.newTodo.text = this.myInput;
-            this.todo.push(...this.newTodo);
+            this.todo.push(this.newTodo);
+            this.newTodo={
+                text:'',
+                checked: false
+            }
         }
     }
 }
