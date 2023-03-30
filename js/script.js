@@ -2,7 +2,12 @@ let{createApp} = Vue;
 createApp({
     data(){
        return{
-        todo:[],
+        todo:[
+            {
+                text:'Fare il prato',
+                checked: false
+            }
+        ],
         myInput:'',
         newTodo:{
             text:'',
@@ -13,10 +18,13 @@ createApp({
     methods:{
         addTodo(){
             this.newTodo.text = this.myInput;
-            this.todo.push(this.newTodo);
-            this.newTodo={
-                text:'',
-                checked: false
+            this.todo.push({...this.newTodo});
+            this.myInput ='';
+        },
+        isChecked(){
+            if(this.todo.item.checked === false){
+                this.todo.item.checked = true;
+                console.log('Completato')
             }
         }
     }

@@ -16,10 +16,10 @@
             <input v-model="myInput" type="text" id="userinput">
             <button @click="addTodo">Crea</button>
             <ul>
-                <li v-for='item in todo'>
-                    <p>{{item.text}}</p>
-                    <div>
-                        <p v-if="!item.checked">&check;</p>
+                <li v-for="(item, index) in todo" :key="index" class="content">
+                    <p :class="item.checked ? 'underline': ''">{{item.text}}</p>
+                    <div class="check"  @click="isChecked()">
+                        <p v-if="item.checked">&check;</p>
                         <p v-else>&cross;</p>
                     </div>
                 </li>

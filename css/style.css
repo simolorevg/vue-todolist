@@ -8,3 +8,13 @@
     width:80%;
     margin: 0 auto;
 }
+.content{
+    display: flex;
+    gap: 10px;
+}
+.check{
+    cursor: pointer;
+}
+.underline{
+    text-decoration: line-through;
+}
