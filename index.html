@@ -13,11 +13,11 @@
         <div class="container">
             <h1>My Todo List</h1>
             <label for="userinput">Inserisci todo:</label>
-            <input type="text" id="userinput" v-model="newTodo">
+            <input v-model="myInput" type="text" id="userinput">
             <button @click="addTodo">Crea</button>
             <ul>
-                <li v-for='(item,index) in todo'>
-                    <p>{{item}}</p>
+                <li v-for='item in todo'>
+                    <p>{{item.text}}</p>
                 </li>
             </ul>
         </div>

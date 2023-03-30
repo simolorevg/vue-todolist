@@ -3,6 +3,7 @@ createApp({
     data(){
        return{
         todo:[],
+        myInput:'',
         newTodo:{
             text:'',
             checked: false
@@ -11,7 +12,7 @@ createApp({
     },
     methods:{
         addTodo(){
-            this.newTodo.text = newTodo;
+            this.newTodo.text = this.myInput;
             this.todo.push(...this.newTodo);
         }
     }
